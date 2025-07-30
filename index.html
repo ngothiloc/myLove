@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bầu trời của chúng ta</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="sky">
+    <canvas id="canvas"></canvas>
+
+    <!-- Ngôi sao chính -->
+    <div class="main-star" onclick="showMessage('Ngôi sao của chúng ta tỏa sáng nhất trên bầu trời này ✨')"></div>
+    <div class="names">Oanh 💖 Lộc</div>
+
+    <!-- Các sao xung quanh -->
+      <div
+        class="star"
+        style="top: 20%; left: 30%"
+        onclick="showMessage('Em là điều đẹp nhất từng xuất hiện trong đời anh')"
+      ></div>
+      <div
+        class="star"
+        style="top: 50%; left: 70%"
+        onclick="showMessage('Cùng nhau ngắm sao mãi nhé 🌌')"
+      ></div>
+      <div
+        class="star"
+        style="top: 70%; left: 20%"
+        onclick="showMessage('Anh yêu em hơn cả vũ trụ này 💫')"
+      ></div>
+      <div
+        class="star"
+        style="top: 30%; left: 25%"
+        onclick="showMessage('Anh nhớ ánh mắt em như ánh sao đầu tiên anh thấy')"
+      ></div>
+      <div
+        class="star"
+        style="top: 15%; left: 70%"
+        onclick="showMessage('Có em, bầu trời của anh mới có ý nghĩa')"
+      ></div>
+      <div
+        class="star"
+        style="top: 80%; left: 60%"
+        onclick="showMessage('Em là ánh sáng dẫn lối cuộc đời anh')"
+      ></div>
+      <div
+        class="star"
+        style="top: 65%; left: 35%"
+        onclick="showMessage('Dù ở đâu, sao vẫn luôn cùng nhau')"
+      ></div>
+      <div
+        class="star"
+        style="top: 20%; left: 90%"
+        onclick="showMessage('Trái tim anh lấp lánh như bầu trời này khi nghĩ về em')"
+      ></div>
+    </div>
+
+    <!-- Bộ đếm ngày yêu -->
+    <div class="love-days" id="loveDays">Yêu nhau được 0 ngày 💕</div>
+  </div>
+
+  <!-- Hộp lời nhắn -->
+  <div class="message-box" id="messageBox">
+    <div class="message-text" id="messageText"></div>
+    <button onclick="closeMessage()">Đóng</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="heart.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  background: black;
+  color: white;
+  height: 100vh;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.main-star {
+  font-size: 60px;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  z-index: 2;
+}
+
+.names {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34px;
+  font-family: "Great Vibes", cursive;
+  color: #ffd9f4;
+  z-index: 2;
+  text-shadow: 0 0 5px white;
+}
+
+.star {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  animation: twinkle 2s infinite alternate;
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.message-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  padding: 20px;
+  display: none;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  backdrop-filter: blur(12px);
+  z-index: 3;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.message-text {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.message-box button {
+  background: #ffffff20;
+  border: 1px solid white;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.message-box button:hover {
+  background: white;
+  color: black;
+}
+/* Ngôi sao chính đẹp hơn */
+.main-star {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(white, #ffd700, #ff9c00);
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px #ffd700aa;
+  animation: rotateStar 8s linear infinite, pulseStar 2s ease-in-out infinite;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Star rotation & glow */
+@keyframes rotateStar {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulseStar {
+  0%,
+  100% {
+    box-shadow: 0 0 30px 10px #ffd700aa;
+  }
+  50% {
+    box-shadow: 0 0 40px 20px #fff3b0;
+  }
+}
+
+/* Các sao nhỏ đa dạng, phát sáng */
+.star {
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(white, #ccc);
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  animation: twinkleStar 3s infinite ease-in-out;
+  box-shadow: 0 0 8px 2px white;
+}
+
+@keyframes twinkleStar {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.love-days {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #ffcccc;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px #ffb6c1;
+  z-index: 3;
+  font-weight: bold;
+}
+
+.heart-svg {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  animation: floatHeart 8s linear forwards;
+  z-index: 1;
+  bottom: 0;
+  opacity: 0.9;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
