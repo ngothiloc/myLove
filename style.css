@@ -415,3 +415,27 @@ canvas {
     scrollbar-width: thin;
     scrollbar-color: #4facfe #f1f1f1;
 }
+
+.music-widget {
+    position: fixed;
+    top: 80px;
+    left: 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    font-family: sans-serif;
+    z-index: 9999;
+  }
+  .music-btn {
+    border: none;
+    background: #4CAF50;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .music-btn:hover {
+    background: #45a049;
+  }

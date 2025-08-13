@@ -7,6 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- music -->
+  <div class="music-widget">
+    <button id="musicToggle" class="music-btn">
+      🎵 Đang phát
+    </button>
+  </div>
   <audio id="bgMusic" autoplay loop>
     <source src="/music.mp3" type="audio/mp3">
   </audio>
@@ -96,6 +103,32 @@
       <div class="year-grid" id="yearGrid"></div>
     </div>
   </div>
+
+ <script>
+    document.addEventListener("click", function() {
+      var audio = document.getElementById("bgMusic");
+      if (audio.paused) {
+        audio.play().catch(error => console.log("Không thể phát nhạc:", error));
+      }
+    });
+
+    const musicBtn = document.getElementById("musicToggle");
+    const audio = document.getElementById("bgMusic");
+
+    // Khi click nút thì đổi trạng thái nhạc
+    musicBtn.addEventListener("click", function(e) {
+      e.stopPropagation(); // Tránh bị click document
+      if (audio.paused) {
+        audio.play();
+        musicBtn.textContent = "🎵 Đang phát";
+        musicBtn.style.background = "#4CAF50";
+      } else {
+        audio.pause();
+        musicBtn.textContent = "⏸ Đang dừng";
+        musicBtn.style.background = "#f44336";
+      }
+    });
+  </script>
 
   <script src="script.js"></script>
   <script src="heart.js"></script>

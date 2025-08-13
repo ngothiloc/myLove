@@ -61,10 +61,15 @@ countLoveDays();
  */
 const IMPORTANT_DATES = {
   annual: {
+    "02-01": "Lần đầu gặp Oanh (2025)",
     "02-14": "Valentine",
     "03-08": "Quốc tế Phụ nữ",
-    "07-23": "Kỷ niệm bắt đầu yêu",    // gợi ý trùng ngày bạn đặt ở countLoveDays
+    "03-26": "Sinh nhật em Oanh",
+    "07-23": "Kỷ niệm bắt đầu yêu em Oanh",
+    "08-24": "Ngày Oanh sang Hàn Quốc",
+    "09-02": "Quốc khánh Việt Nam",  
     "10-20": "Phụ nữ Việt Nam",
+    "10-31": "Sinh nhật bạn Lộc",
     "12-24": "Giáng sinh"
   },
   oneTime: {
