@@ -1,24 +1,4 @@
 function createHeart() {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.backgroundColor = getRandomPink();
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 8000); // khớp với animation: 8s
-}
-
-// Màu hồng pastel ngẫu nhiên
-function getRandomPink() {
-    const pinks = ["#ff99cc", "#ffb6c1", "#ffc0cb", "#ff80ab", "#fdaecb"];
-    return pinks[Math.floor(Math.random() * pinks.length)];
-}
-
-setInterval(createHeart, 600);
-
-function createHeart() {
     const svgNS = "http://www.w3.org/2000/svg";
     const heart = document.createElementNS(svgNS, "svg");
     heart.setAttribute("viewBox", "0 0 32 29.6");

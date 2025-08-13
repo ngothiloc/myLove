@@ -8,9 +8,12 @@
 </head>
 <body>
   <audio id="bgMusic" autoplay loop>
-    <source src="music.mp3" type="audio/mp3">
+    <source src="/music.mp3" type="audio/mp3">
   </audio>
 
+  <button class="menu-btn" id="openCalendarBtn" aria-label="Mở lịch">
+  <span class="menu-icon">☰</span>
+</button>
   <div class="sky">
     <canvas id="canvas"></canvas>
 
@@ -69,6 +72,29 @@
   <div class="message-box" id="messageBox">
     <div class="message-text" id="messageText"></div>
     <button onclick="closeMessage()">Đóng</button>
+  </div>
+
+  
+  <!-- calender -->
+  <div class="calendar-modal" id="calendarModal" aria-hidden="true">
+    <div class="calendar-panel glass" role="dialog" aria-modal="true">
+      <div class="cal-header">
+        <div class="cal-title">Lộc 💖 Oanh — Lịch năm <span id="calYear"></span></div>
+        <div class="cal-actions">
+          <button id="prevYear" class="ghost-btn" title="Năm trước">◀</button>
+          <button id="todayYear" class="ghost-btn" title="Năm hiện tại">Hôm nay</button>
+          <button id="nextYear" class="ghost-btn" title="Năm sau">▶</button>
+          <button id="closeCalendar" class="close-btn" title="Đóng">✕</button>
+        </div>
+      </div>
+
+      <div class="cal-legend">
+        <span class="pill today-pill">Hôm nay</span>
+        <span class="pill imp-pill">Ngày quan trọng 💖</span>
+      </div>
+
+      <div class="year-grid" id="yearGrid"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
