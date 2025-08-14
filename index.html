@@ -118,12 +118,12 @@
   </div>
 
  <script>
-    // document.addEventListener("click", function() {
-    //   var audio = document.getElementById("bgMusic");
-    //   if (audio.paused) {
-    //     audio.play().catch(error => console.log("Không thể phát nhạc:", error));
-    //   }
-    // });
+    document.addEventListener("click", function() {
+      var audio = document.getElementById("bgMusic");
+      if (audio.paused) {
+        audio.play().catch(error => console.log("Không thể phát nhạc:", error));
+      }
+    });
 
     const musicBtn = document.getElementById("musicToggle");
     const audio = document.getElementById("bgMusic");
