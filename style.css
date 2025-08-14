@@ -215,45 +215,54 @@ canvas {
 .menu-btn {
   position: absolute;
   right: 20px;
-  top: 80px;                 /* PC */
+  top: 80px; /* PC */
   z-index: 4;
-  border: 1px solid rgba(255,255,255,0.6);
-  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 10px 14px;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 0 12px rgba(255, 182, 193, 0.5);
-  transition: transform .2s ease, background .2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
   font-family: "Quicksand", sans-serif;
 }
-.menu-btn:hover { transform: translateY(-2px); background: rgba(255,255,255,0.14); }
-.menu-icon { font-size: 18px; line-height: 1; }
+.menu-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.14);
+}
+.menu-icon {
+  font-size: 18px;
+  line-height: 1;
+}
 
 @media (max-width: 768px) {
-  .menu-btn { top: 150px; }  /* Mobile */
+  .menu-btn {
+    top: 150px;
+  } /* Mobile */
 }
 
 /* ===== MODAL LỊCH ===== */
 .calendar-modal {
-  display: none;             /* toggle bằng JS */
+  display: none; /* toggle bằng JS */
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 9;
 }
 .calendar-panel.glass {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: min(1100px, 92vw);
   max-height: 80vh;
   overflow: auto;
   padding: 16px 20px;
   border-radius: 16px;
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 0 0 20px rgba(255, 182, 193, 0.35);
   backdrop-filter: blur(12px);
   color: #fff;
@@ -272,28 +281,46 @@ canvas {
   color: #ffd9f4;
   text-shadow: 0 0 5px white;
 }
-.cal-actions { display: flex; align-items: center; gap: 8px; }
-.ghost-btn, .close-btn {
-  background: rgba(255,255,255,0.10);
+.cal-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ghost-btn,
+.close-btn {
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 6px 10px;
   border-radius: 10px;
   cursor: pointer;
 }
-.close-btn { font-weight: 700; }
-.ghost-btn:hover, .close-btn:hover { background: rgba(255,255,255,0.18); }
+.close-btn {
+  font-weight: 700;
+}
+.ghost-btn:hover,
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
 
-.cal-legend { display: flex; gap: 8px; margin: 8px 0 12px; }
+.cal-legend {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
 .pill {
   font-size: 12px;
   padding: 4px 8px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
-.today-pill { box-shadow: 0 0 10px rgba(255,255,255,0.35); }
-.imp-pill { box-shadow: 0 0 10px rgba(255, 182, 193, 0.6); }
+.today-pill {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+}
+.imp-pill {
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+}
 
 /* Lưới 12 tháng */
 .year-grid {
@@ -302,19 +329,23 @@ canvas {
   gap: 12px;
 }
 @media (max-width: 1024px) {
-  .year-grid { grid-template-columns: repeat(2, 1fr); }
+  .year-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 640px) {
-  .year-grid { grid-template-columns: 1fr; }
+  .year-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .month-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 14px;
   padding: 10px;
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 14px rgba(255,255,255,0.15);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.15);
 }
 
 .month-name {
@@ -322,9 +353,9 @@ canvas {
   margin-bottom: 6px;
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #ffd9f4;
-  text-shadow: 0 0 5px white;      /* đồng bộ style “names” */
+  text-shadow: 0 0 5px white; /* đồng bộ style “names” */
   font-family: "Quicksand", sans-serif;
 }
 
@@ -348,21 +379,28 @@ canvas {
   text-align: center;
   border-radius: 8px;
   padding: 2px 0;
-  transition: background .15s ease, transform .15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
 }
-.month-table td:hover { background: rgba(255,255,255,0.10); transform: translateY(-1px); }
+.month-table td:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
 
 /* Hôm nay */
 .day.today {
-  background: rgba(255,255,255,0.12);
-  outline: 1px solid rgba(255,255,255,0.6);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.12);
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
   border-radius: 8px;
 }
 
 /* Ngày quan trọng */
 .day.important {
-  background: linear-gradient(180deg, rgba(255,153,204,0.85), rgba(255,182,193,0.85));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 153, 204, 0.85),
+    rgba(255, 182, 193, 0.85)
+  );
   color: #2b1c22;
   font-weight: 700;
   position: relative;
@@ -370,18 +408,20 @@ canvas {
 .day.important::after {
   content: "💖";
   position: absolute;
-  top: 2px; right: 4px;
+  top: 2px;
+  right: 4px;
   font-size: 12px;
-  filter: drop-shadow(0 0 2px rgba(255,255,255,0.7));
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
 }
 
 /* Tooltip nhã: hiển thị label ngày quan trọng khi hover */
 .day.important[data-label]:hover::before {
   content: attr(data-label);
   position: absolute;
-  left: 50%; bottom: 105%;
+  left: 50%;
+  bottom: 105%;
   transform: translateX(-50%);
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   font-size: 12px;
   padding: 4px 8px;
@@ -392,50 +432,50 @@ canvas {
 
 /* Áp dụng thanh cuộn đẹp chỉ trong popup */
 .custom-popup::-webkit-scrollbar {
-    width: 8px; /* Độ rộng thanh cuộn */
+  width: 8px; /* Độ rộng thanh cuộn */
 }
 
 .custom-popup::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Nền track */
-    border-radius: 10px;
+  background: #f1f1f1; /* Nền track */
+  border-radius: 10px;
 }
 
 .custom-popup::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #4facfe, #00f2fe); /* Màu thanh cuộn */
-    border-radius: 10px;
-    transition: background 0.3s;
+  background: linear-gradient(180deg, #4facfe, #00f2fe); /* Màu thanh cuộn */
+  border-radius: 10px;
+  transition: background 0.3s;
 }
 
 .custom-popup::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #00f2fe, #4facfe); /* Hiệu ứng hover */
+  background: linear-gradient(180deg, #00f2fe, #4facfe); /* Hiệu ứng hover */
 }
 
 /* Firefox */
 .custom-popup {
-    scrollbar-width: thin;
-    scrollbar-color: #4facfe #f1f1f1;
+  scrollbar-width: thin;
+  scrollbar-color: #4facfe #f1f1f1;
 }
 
 .music-widget {
-    position: fixed;
-    top: 80px;
-    left: 40px;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    padding: 5px 10px;
-    font-family: sans-serif;
-    z-index: 9999;
-  }
-  .music-btn {
-    border: none;
-    background: #4CAF50;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .music-btn:hover {
-    background: #45a049;
-  }
+  position: fixed;
+  top: 80px;
+  left: 40px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  font-family: sans-serif;
+  /* z-index: 9999; */
+}
+.music-btn {
+  border: none;
+  background: #f44336;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.music-btn:hover {
+  background: #f44336;
+}

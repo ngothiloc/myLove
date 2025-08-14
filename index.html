@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>YÊU OANH QUÁAAAA</title>
+  <link rel="icon" type="image/png" href="favicon.jpg">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
 </head>
@@ -11,7 +12,7 @@
   <!-- music -->
   <div class="music-widget">
     <button id="musicToggle" class="music-btn">
-      🎵 Đang phát
+      ⏸ Đang dừng
     </button>
   </div>
   <audio id="bgMusic" autoplay loop>
@@ -105,12 +106,12 @@
   </div>
 
  <script>
-    document.addEventListener("click", function() {
-      var audio = document.getElementById("bgMusic");
-      if (audio.paused) {
-        audio.play().catch(error => console.log("Không thể phát nhạc:", error));
-      }
-    });
+    // document.addEventListener("click", function() {
+    //   var audio = document.getElementById("bgMusic");
+    //   if (audio.paused) {
+    //     audio.play().catch(error => console.log("Không thể phát nhạc:", error));
+    //   }
+    // });
 
     const musicBtn = document.getElementById("musicToggle");
     const audio = document.getElementById("bgMusic");
